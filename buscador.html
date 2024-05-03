@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Productos - Venta de Productos Pecuarios</title>
+  <link rel="stylesheet" href="css/buscador.css">
+</head>
+<body>
+  <header>
+    <h1>Mundo Animal</h1>
+  </header>
+
+  <main>
+  <section id="filtros">
+    <h2>Buscar Producto</h2>
+    <form id="formulario-filtros">
+      <div>
+        <label for="filtro-nombre">Nombre:</label>
+        <input type="text" id="filtro-nombre">
+      </div>
+      <div>
+        <label for="filtro-categoria">Categoría:</label>
+        <select id="filtro-categoria">
+          <option value="">Todas</option>
+          <option value="aves">Aves</option>
+          <option value="bovinos">Bovinos</option>
+          <option value="porcinos">Porcinos</option>
+          <option value="porcinos">Perros</option>
+          <option value="porcinos">Gatos</option>
+          
+        </select>
+      </div>
+      <div>
+        <label for="filtro-precio">Precio Máximo:</label>
+        <input type="number" id="filtro-precio">
+      </div>
+      
+      <button type="button" onclick="limpiarFiltros()">Limpiar Campos</button>
+      <button type="button" onclick="aplicarFiltros()">Buscar</button>
+
+      <div id="loading" class="hidden">Cargando...</div>
+
+    </form>
+  </section>
+  
+  <section id="resultados">
+    <h2>Resultados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <!-- Agrega más columnas son 6 propiedades que  mostrar -->
+        </tr>
+      </thead>
+      <tbody id="lista-resultados">
+        <!-- Aquí se mostrarán los resultados -->
+      </tbody>
+    </table>
+
+      <!-- Paginación -->
+      <div id="paginacion">
+        <button id="pagina-anterior">Página Anterior</button>
+        <span id="pagina-actual"></span>
+        <button id="pagina-siguiente">Siguiente Página</button>
+      </div>
+      
+    
+    <button onclick="regresarAVistaProductos()">Regresar al Inventario</button>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2024 Venta de Productos Pecuarios</p>
+  </footer>
+
+  
+  <script src="js/buscador.js"></script>
+
+
+</body>
+</html>

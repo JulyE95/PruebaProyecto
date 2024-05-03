@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista de Productos - Venta de Productos Pecuarios</title>
+  <link rel="stylesheet" href="css/productos.css">
+</head>
+<body>
+  <header>
+    <h1>Mundo Animal</h1>
+    <nav>
+      <button id="buscar-productos">Buscar Productos</button>
+      <button id="ir-a-registro">Registro de Productos</button>
+    </nav>
+  </header>
+
+<main>
+  <section id="productos">
+    <h2>Inventario</h2>
+    <!-- Aquí se mostrarán los productos -->
+    <div id="lista-productos">
+      <!-- Los productos se generarán dinámicamente con JavaScript -->
+    </div>
+    
+    <!-- Paginación -->
+    <div id="paginacion">
+      <button id="pagina-anterior">Página Anterior</button>
+      <span id="pagina-actual"></span>
+      <button id="pagina-siguiente">Siguiente Página</button>
+    </div>
+  </section>
+
+</main>
+
+  <footer>
+    <p>&copy; 2024 Productos Pecuarios</p>
+  </footer>
+
+  <script src="js/productos.js"></script>
+ 
+  <script>
+    //realiza redirección DOM
+    // Event listener para el botón "Buscar Productos"
+    document.getElementById("buscar-productos").addEventListener("click", function() {
+      window.location.href = 'buscador.html'; // Cambia 'busqueda.html' por la ruta correcta de tu página de búsqueda
+    });
+
+    // Event listener para el botón "Registro de Productos"
+    document.getElementById("ir-a-registro").addEventListener("click", function() {
+      window.location.href = 'index.html'; // Cambia 'registro.html' por la ruta correcta de tu página de registro de productos
+    });
+  </script>
+
+</body>
+</html>
+

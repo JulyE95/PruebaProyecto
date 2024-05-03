@@ -1,0 +1,67 @@
+/* Estilos para la vista de productos */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, nav, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  /* Estilos para la lista de productos */
+  #productos {
+    padding: 20px;
+  }
+  /*Estilo para centrar y tamaño de las imagenes de los productos*/
+
+  .producto-imagen {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .producto-imagen img {
+    max-width: 300px; /* Ancho máximo de la imagen */
+    max-height: 300px; /* Altura máxima de la imagen */
+  }
+  
+  
+  
+
+  #lista-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+  }
+  
+  h3{
+
+  }
+  
+  .producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px; /* Tamaño de la letra */
+  line-height: 1.5; /* Altura de línea */
+  color: #666; /* Color del texto */
+  margin-top: 10px; /* Espacio superior */
+  }
+  
+  /* Estilos para la paginación */
+  #paginacion {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  
+  
